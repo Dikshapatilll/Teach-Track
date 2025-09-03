@@ -69,7 +69,9 @@ export const parseTimetableWithGemini = async (
                 responseSchema: timetableSchema,
             },
         });
-        
+        if (!response.text) {
+            throw new Error("Response did not contain any text.");
+          }
         const jsonText = response.text.trim();
         // The response text is already a JSON string because of the responseMimeType
         const parsedData = JSON.parse(jsonText);

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { UserRole, TimeTableEntry } from '../types';
 import Card from '../components/shared/Card';
